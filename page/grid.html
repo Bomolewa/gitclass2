@@ -1,0 +1,115 @@
+DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID CSS</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+
+ body {
+         padding: 0;
+         background-color: black;
+        }
+        .item1 { grid-area: one; }
+        .item2 { grid-area: two; }
+        .item3 { grid-area: three; }
+        .item4 { grid-area: four; }
+        .item5 { grid-area: five; }
+        
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'one one one one two two two' 
+            'one one one one two two two'
+            'one one one one two two two'
+            'three three three four four four four'
+            'three three three five five five five';
+          gap: 15px;
+          background-color: black;
+          padding: 5px;
+          height: 500px;
+          width: 600px;
+          margin: 180px auto;
+        }
+        
+        .grid-container > div  {
+          background-color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          padding: 25px 15px;
+          font-size: 30px;
+          }
+
+@media screen and (max-width: 375px) {
+                 body {
+                     width: 100%;
+                 }
+                }
+        
+                nav {
+                 display: flex;
+                 justify-content: space-around;
+                 align-items: center;
+                 min-height: 8vh;
+                 background-color: teal;
+                 font-family: Arial, sans-serif;
+             }
+             
+             .nav-links {
+                 display: flex;
+                 justify-content: space-around;
+                 width: 90%;
+             }
+             
+             .nav-links li {
+                 list-style: none;
+             }
+             
+             .nav-links a {
+                 color: white;
+                 text-decoration: none;
+                 letter-spacing: 3px;
+                 font-weight: bold;
+                 font-size: 14px;
+                 padding: 14px 16px;
+             }
+             
+             .nav-links a:hover:not(.active) {
+                 background-color: lightseagreen;
+             }
+             
+             .nav-links li a.active {
+                 background-color: deeppink;
+             }
+             
+        </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="../index.html">CSS Flexbox Layout</a></li>
+
+                <li><a class="active" href="page/grid.html">Grid CSS</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="grid-container">
+        <div class="item1" style="background-color: lightcoral;"></div>
+        <div class="item2" style="background-color: greenyellow;"></div>
+        <div class="item3" style="background-color: lightgray;"></div>  
+        <div class="item4" style="background-color:skyblue;"></div>
+        <div class="item5" style="background-color: skyblue;"></div>
+      </div>
+      
+    </div>
+    </main>
+  </body>
+</html>
